@@ -59,15 +59,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             height: SizeConfig.blockV! * 35,
                           ),
                           SizedBox(
-                            height: (height >= 840) ? 60 : 30,
+                            height: (height >= 840) ? 50 : 25,
                           ),
                           Text(
                             onboardings[i].title,
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontFamily: "Mulish",
                               fontWeight: FontWeight.w600,
-                              fontSize: (width <= 550) ? 30 : 35,
+                              fontSize: (width <= 550) ? 25 : 30,
                             ),
                           ),
                           SizedBox(
@@ -76,9 +75,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           Text(
                             onboardings[i].desc,
                             style: TextStyle(
-                              fontFamily: "Mulish",
                               fontWeight: FontWeight.w300,
-                              fontSize: (width <= 550) ? 17 : 25,
+                              fontSize: (width <= 550) ? 15 : 23,
                             ),
                             textAlign: TextAlign.center,
                           )
