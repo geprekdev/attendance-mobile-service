@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:siamawolu/config/size_config.dart';
 import 'package:siamawolu/data/onboarding_model.dart';
+import 'package:siamawolu/pages/role_page.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -49,7 +50,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 itemCount: onboardings.length,
                 itemBuilder: (context, i) {
                   return Container(
-                    // color: colors[i],
                     child: Padding(
                       padding: const EdgeInsets.all(40.0),
                       child: Column(
@@ -105,7 +105,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       ? Padding(
                           padding: const EdgeInsets.all(30),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const RolePage(),
+                                ),
+                              );
+                            },
                             child: Text("START"),
                             style: ElevatedButton.styleFrom(
                               primary: Colors.black,
